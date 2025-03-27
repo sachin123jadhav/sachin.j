@@ -7,12 +7,9 @@ import CountUp from "react-countup";
 
 function TopSlider() {
   return (
-    <div>
+    <div className="tp-hero-pt   p-relative">
       {/*Banner Start*/}
-      <div
-        className="twm-home1-banner-section site-bg-gray bg-cover"
-       
-      >
+      <div className="twm-home1-banner-section site-bg-gray bg-cover mt-190">
         <div className="row">
           {/*Left Section*/}
           <div className="col-xl-6 col-lg-6 col-md-12">
@@ -92,7 +89,6 @@ function TopSlider() {
                   </div>
                 </form>
               </div>
-             
             </div>
           </div>
           {/*right Section*/}

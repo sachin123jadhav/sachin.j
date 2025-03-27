@@ -1,5 +1,6 @@
 import Wrapper from "@/layouts/wrapper";
 import HomeOne from "@/components/homes/home";
+import HomeThree from "@/components/homes/home-3";
 
 export const metadata = {
   title: "Softec - Data analytics"
@@ -8,7 +9,7 @@ export const metadata = {
 const HomePage = () => {
   return (
     <Wrapper>
-      <HomeOne />
+      <HomeThree />
     </Wrapper>
   );
 };

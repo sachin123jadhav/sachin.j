@@ -10,11 +10,13 @@ import IntegrationArea from "./integration-area";
 import RatedArea from "./rated-area";
 import SalesArea from "../../../common/sales-area";
 import ServiceArea from "./service-area";
+import TopSlider from "../home/top-slider";
 
 const HomeThree = () => {
   return (
     <>
       <HeaderThree />
+      <TopSlider />
       <HeroArea />
       <CounterArea />
       <ServiceArea />

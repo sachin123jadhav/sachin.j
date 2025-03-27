@@ -1,9 +1,9 @@
 
-/* Home Page 1 Banner Section Css Start */
+/* Home Page 1 Banner Section Css Start jobzilla*/
 .twm-home1-banner-section {
   position: relative;
-  padding-top: 160px;
-  overflow: hidden;
+  padding-top: 560px;
+  
 }
 .twm-home1-banner-section > .row {
   display: flex;
@@ -11,7 +11,7 @@
   justify-content: space-between;
 }
 .twm-home1-banner-section > .row .twm-bnr-left-section {
-  max-width: 745px;
+  max-width: 645px;
   padding-left: 20px;
   margin-left: auto;
   position: relative;
