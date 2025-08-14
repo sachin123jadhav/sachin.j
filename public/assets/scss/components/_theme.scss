@@ -44,9 +44,16 @@
 /*----------------------------------------*/
 
 @import url($font-url);
+
+
 @media (min-width: 1200px){
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1200px;
+    }
+}
+@media (min-width: 1350px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1340px;
     }
 }
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {

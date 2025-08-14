@@ -2,7 +2,7 @@
 /* Home Page 1 Banner Section Css Start jobzilla*/
 .twm-home1-banner-section {
   position: relative;
-  padding-top: 560px;
+  
   
 }
 .twm-home1-banner-section > .row {
@@ -12,15 +12,17 @@
 }
 .twm-home1-banner-section > .row .twm-bnr-left-section {
   max-width: 645px;
-  padding-left: 20px;
-  margin-left: auto;
+  
+  margin-left: 0;
   position: relative;
   z-index: 2;
 }
+.twm-bnr-right-content{transform: scale(0.6) translateX(-210px);margin-top: 460px; }
 @media (max-width: 1270px) {
   .twm-home1-banner-section > .row .twm-bnr-left-section {
     padding-left: 30px;
   }
+  
 }
 @media (max-width: 991px) {
   .twm-home1-banner-section > .row .twm-bnr-left-section {
@@ -42,8 +44,8 @@
   }
 }
 .twm-home1-banner-section > .row .twm-bnr-left-section .twm-bnr-title-large {
-  font-size: 66px;
-  line-height: 72px;
+  font-size: 40px;
+  line-height: 45px;
   font-weight: 500;
   color: #17171d;
   margin-bottom: 30px;
@@ -66,7 +68,8 @@
   margin-bottom: 30px;
 }
 .twm-home1-banner-section .twm-bnr-right-section {
-  position: relative;
+  position: relative;margin-bottom: 30px;
+
 }
 .twm-home1-banner-section .twm-bnr-right-section .twm-bnr-right-content {
   max-width: 900px;
@@ -343,13 +346,13 @@
   font-size: 38px;
   line-height: 38px;
   font-weight: 700;
-  font-family: "Rubik", sans-serif;
+  
 }
 .twm-home1-banner-section .twm-bnr-blocks-3 .twm-content .tw-count-number .counter {
   font-size: 38px;
   line-height: 40px;
   font-weight: 600;
-  font-family: "Rubik", sans-serif;
+  
 }
 .twm-home1-banner-section .twm-bnr-blocks-3 .twm-content .icon-content-info {
   color: #17171d;

@@ -19,8 +19,8 @@ const HomeOne = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main className="fix">
-            <HeroSlider />
-            <TopSlider />
+            <HeroSlider />wreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+            <TopSlider />dfgdfgfdgfdgfdg
             <FeatureArea />
             <AboutArea />
             <ServicesArea />

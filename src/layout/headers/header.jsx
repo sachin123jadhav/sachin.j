@@ -9,7 +9,7 @@ import React, {useState, useRef, useEffect} from 'react';
 import NavMenu from './nav-menu';
 import Image from 'next/image';
 
-import logo from "@/assets/img/logo/logo-black.png"
+import logo from "@/assets/img/logo/SachinJadhavLogo.png";
 
 const Header = () => {
 
