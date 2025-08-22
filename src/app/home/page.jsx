@@ -1,16 +1,16 @@
 import Wrapper from "@/layouts/wrapper";
-import HomeThree from "@/components/homes/home-3";
+import HomeOne from "@/components/homes/home";
 
 export const metadata = {
   title: "Softec - CRM Software",
 };
 
-const HomeThreePage = () => {
+const HomeOnePage = () => {
   return (
     <Wrapper>
-      <HomeThree />
+      <HomeOne />
     </Wrapper>
   );
 };
 
-export default HomeThreePage;
+export default HomeOnePage;

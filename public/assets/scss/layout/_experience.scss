@@ -1,0 +1,82 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  26. EXPERIENCE CSS START
+/*----------------------------------------*/
+
+.tp-experience {
+  
+  &__content {
+    display: flex;
+    gap: 20px;
+    border-radius: 5px;
+    align-items: stretch; margin-bottom: 25px;
+  }
+
+  &__details {
+    flex: 1;
+    padding: 20px;
+    background: var(--tp-common-white);
+    box-shadow: 0px 1px 3px rgba(18, 20, 32, 0.2);
+
+    @media #{$xs} {
+      padding: 15px;
+    }
+
+    h3{font-size: 20px;}
+    h4{font-size: 14px; color: var(--tp-common-grey);}
+  }
+
+  &__duration {
+    width: 180px;
+    padding: 25px;
+    background-color: #ff4b7e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 5px;
+    position: relative;
+
+    .duration__number{
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.2; color: #fff; margin-bottom: 0;
+    }
+    .duration__text {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.2; color: #fff; padding: 8px 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -8px;
+      transform: translate(50%, -50%);
+      
+      /* triangle */
+      width: 0;
+      height: 0;
+      border-left: 20px solid #ff4b7e; // default color
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      z-index: 6;
+    }
+  }
+
+  /* 🔥 Modifier classes apply on .tp-experience__content */
+  &__content.comp-1 {
+    .tp-experience__duration::after {
+      border-left-color: red;
+    }
+  }
+
+  &__content.comp-2 {
+    .tp-experience__duration::after {
+      border-left-color: green;
+    }
+  }
+}

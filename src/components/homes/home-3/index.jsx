@@ -16,7 +16,7 @@ const HomeThree = () => {
   return (
     <>
       <HeaderThree />
-      <TopSlider />
+      <TopSlider /> 
       <HeroArea />
       <CounterArea />
       <ServiceArea />

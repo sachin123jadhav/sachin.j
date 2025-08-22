@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-----------------------------------------------------------------------------------
 
     Theme Name: Softec - Data analytics HTML5 Template
@@ -24595,15 +24596,14 @@ input[type=color] {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--tp-common-yellow-3);
+  color: var(--tp-common-red);
   display: inline-block;
 }
 .tp-section-subtitle-4::before {
   content: "";
   height: 1.5px;
   width: 20px;
-  background-color: var(--tp-common-yellow-3);
+  background-color: var(--tp-common-red);
   display: inline-block;
   transform: translateY(-5px);
   margin-right: 10px;
@@ -27003,35 +27003,20 @@ input[type=color] {
 /*----------------------------------------*/
 /*  13. FEATURE CSS START
 /*----------------------------------------*/
-.tp-feature__bottom-shape {
-  position: absolute;
-  left: 0;
-  bottom: -125px;
-  z-index: -1;
-  width: 100%;
-}
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .tp-feature__bottom-shape {
-    bottom: -15px;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .tp-feature__bottom-shape {
-    bottom: 22px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .tp-feature__bottom-shape {
-    bottom: 75px;
-  }
+.tp-feature__bg {
+  background-image: url("./../../img/about/about_bg..png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 60px 30px;
+  border-radius: 40px;
 }
 @media (max-width: 767px) {
-  .tp-feature__bottom-shape {
-    bottom: 90px;
+  .tp-feature__bg {
+    padding-top: 40px;
   }
 }
-.tp-feature__bottom-shape img {
-  width: 100%;
+.tp-feature__bg h6 {
+  line-height: 1.5;
 }
 @media (max-width: 767px) {
   .tp-feature__pt-pb {
@@ -38142,6 +38127,84 @@ input[type=color] {
   color: var(--tp-common-blue-3);
 }
 
+/*----------------------------------------*/
+/*  26. EXPERIENCE CSS START
+/*----------------------------------------*/
+.tp-experience {
+  /* 🔥 Modifier classes apply on .tp-experience__content */
+}
+.tp-experience__content {
+  display: flex;
+  gap: 20px;
+  border-radius: 5px;
+  align-items: stretch;
+  margin-bottom: 25px;
+}
+.tp-experience__details {
+  flex: 1;
+  padding: 20px;
+  background: var(--tp-common-white);
+  box-shadow: 0px 1px 3px rgba(18, 20, 32, 0.2);
+}
+@media (max-width: 767px) {
+  .tp-experience__details {
+    padding: 15px;
+  }
+}
+.tp-experience__details h3 {
+  font-size: 20px;
+}
+.tp-experience__details h4 {
+  font-size: 14px;
+  color: var(--tp-common-grey);
+}
+.tp-experience__duration {
+  width: 180px;
+  padding: 25px;
+  background-color: #ff4b7e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 5px;
+  position: relative;
+}
+.tp-experience__duration .duration__number {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 0;
+}
+.tp-experience__duration .duration__text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  padding: 8px 0;
+}
+.tp-experience__duration::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translate(50%, -50%);
+  /* triangle */
+  width: 0;
+  height: 0;
+  border-left: 20px solid #ff4b7e;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  z-index: 6;
+}
+.tp-experience__content.comp-1 .tp-experience__duration::after {
+  border-left-color: red;
+}
+.tp-experience__content.comp-2 .tp-experience__duration::after {
+  border-left-color: green;
+}
+
 /* Home Page 1 Banner Section Css Start jobzilla*/
 .twm-home1-banner-section {
   position: relative;
@@ -38218,6 +38281,7 @@ input[type=color] {
 
 .twm-home1-banner-section .twm-bnr-right-section {
   position: relative;
+  margin-bottom: 30px;
 }
 
 .twm-home1-banner-section .twm-bnr-right-section .twm-bnr-right-content {

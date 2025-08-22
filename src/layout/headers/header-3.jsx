@@ -44,7 +44,7 @@ const HeaderThree = () => {
                     <div className="header-bottom__btn d-flex align-items-center">
                       <Link
                         className="tp-btn-blue-sm d-none d-md-inline-block tp-btn-hover alt-color-black"
-                        href="/service-details"
+                        href="../assets/img/SachinJadhavWebDeveloper.pdf"
                       >
                         <span>
                           {" "}

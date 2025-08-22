@@ -1,38 +1,21 @@
-'use client';
-import ScrollToTop from "@/hooks/scroll-to-top";
-import Header from "@/layout/headers/header";
-import AboutArea from "../../../common/about-area";
-import FeatureArea from "./feature-area";
-import HeroSlider from "./hero-slider";
-import PriceArea from "./price-area";
-import ProjectArea from "./project-area";
-import RankArea from "./rank-area";
-import ServicesArea from "./services-area";
-import TestimonialArea from "./testimonial-area";
-import Footer from "@/layout/footers/footer";
+"use client";
+import FooterThree from "@/layout/footers/footer-3";
+import HeaderThree from "@/layout/headers/header-3";
 import TopSlider from "./top-slider";
+import Footer from "@/layout/footers/footer";
+import AboutMe from "./about-me";
+import Experience from "./experience";
+
 
 const HomeOne = () => {
   return (
     <>
-      <Header />
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main className="fix">
-            <HeroSlider />wreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-            <TopSlider />dfgdfgfdgfdgfdg
-            <FeatureArea />
-            <AboutArea />
-            <ServicesArea />
-            <ProjectArea />
-            <TestimonialArea />
-            <RankArea />
-            <PriceArea />
-          </main>
-          <Footer />
-          <ScrollToTop />
-        </div>
-      </div>
+      <HeaderThree />
+      <TopSlider />
+      <AboutMe />
+      <Experience />
+  
+      <Footer />
     </>
   );
 };
