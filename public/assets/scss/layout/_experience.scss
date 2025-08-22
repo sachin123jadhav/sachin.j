@@ -13,6 +13,8 @@
     align-items: stretch; margin-bottom: 25px;
   }
 
+
+ 
   &__details {
     flex: 1;
     padding: 20px;
@@ -25,6 +27,11 @@
 
     h3{font-size: 20px;}
     h4{font-size: 14px; color: var(--tp-common-grey);}
+    p{overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical; }
   }
 
   &__duration {
@@ -50,7 +57,12 @@
       line-height: 1.2; color: #fff; padding: 8px 0;
     }
 
-    &::after {
+    
+  }
+
+   &__content-left{   
+      
+.tp-experience__duration::after {
       content: "";
       position: absolute;
       top: 50%;
@@ -64,19 +76,63 @@
       border-top: 15px solid transparent;
       border-bottom: 15px solid transparent;
       z-index: 6;
-    }
+    }     
+    
   }
+
+&__content-right{   
+      flex-direction: row-reverse;
+
+.tp-experience__duration::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -30px;
+      transform: translate(50%, -50%)  rotate(180deg);
+      
+      /* triangle */
+      width: 0;
+      height: 0;
+      border-left: 20px solid #ff4b7e; // default color
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      z-index: 6;
+    }     
+    
+  }
+
+
+
 
   /* 🔥 Modifier classes apply on .tp-experience__content */
   &__content.comp-1 {
     .tp-experience__duration::after {
-      border-left-color: red;
+      border-left-color: #ff4b7e;
     }
   }
 
   &__content.comp-2 {
+    .tp-experience__duration{background-color: #fcc760;}
     .tp-experience__duration::after {
-      border-left-color: green;
+      border-left-color: #fcc760;
+    }
+  }
+   &__content.comp-3 {
+    .tp-experience__duration{background-color: #ff7551}
+    .tp-experience__duration::after {
+      border-left-color: #ff7551
+    }
+  }
+   &__content.comp-4 {
+    .tp-experience__duration{background-color: #00c8d8;}
+    .tp-experience__duration::after {
+      border-left-color: #00c8d8;
+    }
+  }
+   &__content.comp-5 {
+    .tp-experience__duration{background-color: #7709d7;}
+    .tp-experience__duration::after {
+      border-left-color: #7709d7;
     }
   }
 }

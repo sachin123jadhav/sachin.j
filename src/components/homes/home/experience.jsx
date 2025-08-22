@@ -3,54 +3,86 @@ import React from "react";
 const experiences = [
   {
     id: 1,
-    startYear: "2009",
-    endYear: "2010",
-    duration: "July to Feb",
-    title: "Web Designer",
-    company: "Remote Control Media INC.",
-    description:
-      "Worked as a Web Designer at Tech Solutions, creating responsive websites.",
+    startYear: "2023",
+    endYear: "Present",
+    duration: "July to Present",
+    title: "Senior Web Designer",
+    company: "Metamind Solutions Pvt. Ltd.",
+    description: `
+      <p>Key responsibilities included:</p>
+      <ul>
+        <li>Led and managed design and development teams.</li>
+        <li>Delivered high-quality products aligned with business goals.</li>
+        <li>Ensured responsive and accessible UI/UX designs.</li>
+      </ul>
+    `,
     compClass: "comp-1",
+    positionClass: "left",
   },
   {
     id: 2,
-    startYear: "2011",
-    endYear: "2013",
-    duration: "Mar to Dec",
-    title: "UI Developer",
-    company: "Creative Studios",
-    description: "Designed and implemented UI components for web applications.",
+    startYear: "2014",
+    endYear: "2023",
+    duration: "Nov to June",
+    title: "Senior Web Designer",
+    company: "EC Infosolutions Pvt Ltd.",
+    description: `
+      <p>Key responsibilities included:</p>
+      <ul>
+        <li>Led and managed design and development teams.</li>
+        <li>Delivered high-quality products aligned with business goals.</li>
+        <li>Ensured responsive and accessible UI/UX designs.</li>
+      </ul>
+    `,
     compClass: "comp-2",
+    positionClass: "left",
   },
   {
     id: 3,
     startYear: "2014",
-    endYear: "2016",
-    duration: "Jan to Sep",
-    title: "Frontend Engineer",
-    company: "Tech Innovations",
+    endYear: "2014",
+    duration: "Aug to Oct",
+    title: "Web Designer",
+    company: "Techguys247 IT Solution (P) Ltd.",
     description: "Built modern frontends with React and Bootstrap.",
     compClass: "comp-3",
+    positionClass: "right",
   },
   {
     id: 4,
-    startYear: "2017",
-    endYear: "2019",
-    duration: "Apr to Nov",
-    title: "Senior Web Developer",
-    company: "Pixel Agency",
-    description: "Led a small team delivering high-quality web solutions.",
+    startYear: "2010",
+    endYear: "2014",
+    duration: "March to Aug",
+    title: "Graphic Web Designer",
+    company: "Prasanna Purple Mobility Solutions Pvt Ltd.",
+    description: `
+      <p>Key responsibilities included:</p>
+      <ul>
+        <li>Led and managed design and development teams.</li>
+        <li>Delivered high-quality products aligned with business goals.</li>
+        <li>Ensured responsive and accessible UI/UX designs.</li>
+      </ul>
+    `,
     compClass: "comp-4",
+    positionClass: "right",
   },
   {
     id: 5,
-    startYear: "2020",
-    endYear: "2023",
-    duration: "Jan to Dec",
-    title: "Lead Engineer",
-    company: "Global Software Pvt Ltd.",
-    description: "Architected and delivered scalable front-end systems.",
+    startYear: "2009",
+    endYear: "2010",
+    duration: "June to Feb",
+    title: "Flash Designer",
+    company: "Remote Control Media INC.",
+    description: `
+      <p>Key responsibilities included:</p>
+      <ul>
+        <li>Led and managed design and development teams.</li>
+        <li>Delivered high-quality products aligned with business goals.</li>
+        <li>Ensured responsive and accessible UI/UX designs.</li>
+      </ul>
+    `,
     compClass: "comp-5",
+    positionClass: "left",
   },
 ];
 
@@ -65,7 +97,7 @@ const Experience = () => {
               className="col-xl-6 col-lg-6 col-md-6 col-12 wow fadeInUp"
             >
               <div
-                className={`tp-experience__content tp-experience__content-left ${exp.compClass}`}
+                className={`tp-experience__content tp-experience__content-${exp.positionClass} ${exp.compClass}`}
               >
                 <div className="tp-experience__duration">
                   <h2 className="duration__number">{exp.startYear}</h2>
@@ -75,7 +107,10 @@ const Experience = () => {
                 <div className="tp-experience__details">
                   <h3 className="tp-experience__title">{exp.title}</h3>
                   <h4 className="tp-experience__company">{exp.company}</h4>
-                  <p>{exp.description}</p>
+                  <p
+                    className="tp-experience__desc"
+                    dangerouslySetInnerHTML={{ __html: exp.description }}
+                  />
                   <div className="tp-experience__button">Read More</div>
                 </div>
               </div>
