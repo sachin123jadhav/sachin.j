@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
 import HeaderFour from "@/layout/headers/header-4";
@@ -8,11 +7,9 @@ import Footer from "@/layout/footers/footer";
 import error_shape_1 from "@/assets/img/login/error-shape.png";
 import error_shape_2 from "@/assets/img/login/text-404.png";
 
-
 export const metadata = {
-  title: "Oops.! Page Not Found!"
+  title: "Oops.! Page Not Found!",
 };
-
 
 export default function NotFoundPage() {
   return (
