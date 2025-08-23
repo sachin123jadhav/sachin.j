@@ -1,4 +1,4 @@
-
+// app/not-found.jsx
 import NotFoundClient from "@/components/NotFoundClient";
 
 export const metadata = {
