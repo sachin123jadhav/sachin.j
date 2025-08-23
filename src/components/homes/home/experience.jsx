@@ -107,10 +107,16 @@ const Experience = () => {
                 <div className="tp-experience__details">
                   <h3 className="tp-experience__title">{exp.title}</h3>
                   <h4 className="tp-experience__company">{exp.company}</h4>
-                  <p
-                    className="tp-experience__desc"
-                    dangerouslySetInnerHTML={{ __html: exp.description }}
-                  />
+                  <div className="tp-experience__desc">
+                    {exp.description.startsWith("<") ? (
+                      <div
+                        dangerouslySetInnerHTML={{ __html: exp.description }}
+                      />
+                    ) : (
+                      <p>{exp.description}</p>
+                    )}
+                  </div>
+
                   <div className="tp-experience__button">Read More</div>
                 </div>
               </div>
