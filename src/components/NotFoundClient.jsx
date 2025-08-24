@@ -1,8 +1,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import HeaderFour from "@/layout/headers/header-4";
-import Footer from "@/layout/footers/footer";
+// import HeaderFour from "@/layout/headers/header-4";
+// import Footer from "@/layout/footers/footer";
 
 import error_shape_1 from "@/assets/img/login/error-shape.png";
 import error_shape_2 from "@/assets/img/login/text-404.png";
@@ -10,7 +10,7 @@ import error_shape_2 from "@/assets/img/login/text-404.png";
 export default function NotFoundClient() {
   return (
     <>
-      <HeaderFour style_error={true} />
+      {/* <HeaderFour style_error={true} /> */}
 
       <div id="smooth-wrapper">
         <div id="smooth-content">
@@ -42,7 +42,7 @@ export default function NotFoundClient() {
             </div>
           </main>
 
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </div>
     </>

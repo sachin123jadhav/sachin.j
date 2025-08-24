@@ -91,37 +91,43 @@ const Experience = () => {
     <section className="tp-experience__area p-relative pt-130 pb-130">
       <div className="container">
         <div className="row">
-          {experiences.map((exp) => (
-            <div
-              key={exp.id}
-              className="col-xl-6 col-lg-6 col-md-6 col-12 wow fadeInUp"
-            >
+          {experiences.map((exp, index) => {
+            // calculate delay (start from 0.3s and increase by 0.2s each card)
+            const delay = 0.3 + index * 0.2;
+            return (
               <div
-                className={`tp-experience__content tp-experience__content-${exp.positionClass} ${exp.compClass}`}
+                key={exp.id}
+                className="col-xl-6 col-lg-6 col-md-6 col-12 wow fadeInUp"
+                data-wow-duration=".9s"
+                data-wow-delay={`${delay}s`}
               >
-                <div className="tp-experience__duration">
-                  <h2 className="duration__number">{exp.startYear}</h2>
-                  <span className="duration__text">{exp.duration}</span>
-                  <h2 className="duration__number">{exp.endYear}</h2>
-                </div>
-                <div className="tp-experience__details">
-                  <h3 className="tp-experience__title">{exp.title}</h3>
-                  <h4 className="tp-experience__company">{exp.company}</h4>
-                  <div className="tp-experience__desc">
-                    {exp.description.startsWith("<") ? (
-                      <div
-                        dangerouslySetInnerHTML={{ __html: exp.description }}
-                      />
-                    ) : (
-                      <p>{exp.description}</p>
-                    )}
+                <div
+                  className={`tp-experience__content tp-experience__content-${exp.positionClass} ${exp.compClass}`}
+                >
+                  <div className="tp-experience__duration">
+                    <h2 className="duration__number">{exp.startYear}</h2>
+                    <span className="duration__text">{exp.duration}</span>
+                    <h2 className="duration__number">{exp.endYear}</h2>
                   </div>
+                  <div className="tp-experience__details">
+                    <h3 className="tp-experience__title">{exp.title}</h3>
+                    <h4 className="tp-experience__company">{exp.company}</h4>
+                    <div className="tp-experience__desc">
+                      {exp.description.startsWith("<") ? (
+                        <div
+                          dangerouslySetInnerHTML={{ __html: exp.description }}
+                        />
+                      ) : (
+                        <p>{exp.description}</p>
+                      )}
+                    </div>
 
-                  <div className="tp-experience__button">Read More</div>
+                    <div className="tp-experience__button">Read More</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
