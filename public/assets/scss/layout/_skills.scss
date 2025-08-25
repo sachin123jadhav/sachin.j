@@ -1,0 +1,107 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  26. EXPERIENCE CSS START
+/*----------------------------------------*/
+
+.my-skills {
+ background-image: url('./../../img/about/about_bg1.jpg');background-size: cover;
+    &__tab {
+border: none;justify-content: center;gap: 15px;
+      .nav-link{background-color: #F5F5F5;border: 1px solid rgba(18, 20, 32, 0.4);box-shadow: 0px 1px 3px rgba(18, 20, 32, 0.2);border-radius: 5px;font-weight: 500;font-size: 18px;line-height: 1.5;color:#000;padding: 12px 30px;transition: .3s;margin-right: 15px;}
+     
+    .nav-link::after{content: "\f105"; font-family: "Font Awesome 5 Pro"; margin-left: 15px; }
+    .nav-link.active::after{content: "\f107";}
+    .nav-link.active{background-color: var(--tp-common-red); color: #fff; border-color: var(--tp-common-red);}
+  }
+
+
+}
+  .tab-content{border: dashed 1px var(--tp-common-red);padding-bottom: 45px;padding-top: 80px; 
+  margin-top: -40px; padding: 80px 35px 35px;border-radius: 15px;}
+
+
+  .offer {
+	&-area {
+		position: relative;
+		overflow: hidden;
+		z-index: 1;
+	}
+	&__shadow {
+		position: absolute;
+		// @include center;
+		z-index: -1;
+	}
+	&__shape-left {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		opacity: 0.3;
+	}
+	&__shape-right {
+		position: absolute;
+		top: 0px;
+		right: 0;
+		opacity: 0.3;
+	}
+	&__icon {
+		width: 70px;
+  height: 70px;
+		margin: 0 auto;border-radius: 50%;
+    line-height: 70px;
+    border: solid 1px  #ff3c82;
+		background: #fff;
+		margin-top: -35px;
+		transition: 1s;
+	}
+	&__item {
+		border: 1px solid rgba(218, 21, 21, 0.3);  background: #fff;
+		padding: 20px;
+		padding-top: 0;
+		border-radius: 8px;
+		text-align: center;
+		cursor: pointer;
+		position: relative;
+		// @include breakpoint(max-lg) {
+		// 	margin-top: 30px;
+		// }
+		.shape-top {
+			position: absolute;
+			top: 50%;
+			right: 50%;
+			opacity: 0;
+			visibility: hidden;
+			transition: var(--transition);
+		}
+		.shape-bottom {
+			position: absolute;
+			bottom: 50%;
+			left: 50%;
+			opacity: 0;
+			visibility: hidden;
+			transition: var(--transition);
+		}
+		&:hover {
+			.shape-top {
+				top: -1px;
+				right: -1px;
+				opacity: 1;
+				visibility: visible;
+			}
+			.shape-bottom {
+				position: absolute;
+				bottom: -1px;
+				left: -1px;
+				opacity: 1;
+				visibility: visible;
+			}
+			.offer__icon {
+				background: #da3445;
+				transform: rotateY(360deg);
+				svg path {
+					fill: #fff;
+				}
+			}
+		}
+	}
+}

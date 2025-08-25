@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const experiences = [
   {
@@ -87,12 +87,21 @@ const experiences = [
 ];
 
 const Experience = () => {
+  const [selectedExp, setSelectedExp] = useState(null);
+
+  const openModal = (exp) => {
+    setSelectedExp(exp);
+  };
+
+  const closeModal = () => {
+    setSelectedExp(null);
+  };
+
   return (
-    <section className="tp-experience__area p-relative pt-130 pb-130">
+    <section className="tp-experience__area p-relative pt-50 pb-50">
       <div className="container">
         <div className="row">
           {experiences.map((exp, index) => {
-            // calculate delay (start from 0.3s and increase by 0.2s each card)
             const delay = 0.3 + index * 0.2;
             return (
               <div
@@ -122,7 +131,14 @@ const Experience = () => {
                       )}
                     </div>
 
-                    <div className="tp-experience__button">Read More</div>
+                    <div className="tp-experience__button">
+                      <button
+                        className="btn btn-primary"
+                        onClick={() => openModal(exp)}
+                      >
+                        Read More
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -130,6 +146,35 @@ const Experience = () => {
           })}
         </div>
       </div>
+
+      {/* Modal */}
+      {selectedExp && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside modal
+          >
+            <button className="modal-close" onClick={closeModal}>
+              ✖
+            </button>
+            <h2>{selectedExp.title}</h2>
+            <h4>{selectedExp.company}</h4>
+            <p>
+              {selectedExp.startYear} - {selectedExp.endYear} (
+              {selectedExp.duration})
+            </p>
+            <div>
+              {selectedExp.description.startsWith("<") ? (
+                <div
+                  dangerouslySetInnerHTML={{ __html: selectedExp.description }}
+                />
+              ) : (
+                <p>{selectedExp.description}</p>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

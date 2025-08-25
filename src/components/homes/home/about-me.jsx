@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react'
+import CircleAnimation from './circle-animation';
 
 function AboutMe() {
   return (
@@ -7,14 +8,14 @@ function AboutMe() {
       <div className="tp-feature__area tp-feature__pt-pb pt-50 pb-50 p-relative">
         <div className="container">
           <div className="tp-feature__bg tp-feature__pt-pb ">
-            <div className="row justify-content-center">
+            <div className="row justify-content-center align-items-center">
               <div
                 className="col-xl-6 wow tpfadeUpp"
                 data-wow-duration=".9s"
                 data-wow-delay=".2s"
               >
                 <div className="tp-feature__section-box  mb-55 tp-title-anim">
-                  <p></p>
+                  <CircleAnimation />
                 </div>
               </div>
               <div

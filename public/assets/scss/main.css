@@ -20154,6 +20154,7 @@ i[class^=flaticon-]:before, i[class*=" flaticon-"]:before {
   --tp-theme-4: #F1A0AF;
   --tp-border-1: #EDF5FA;
   --tp-border-2: #EBECF0;
+  --transition: all 0.3s ease-in-out;
 }
 
 @media (min-width: 1200px) {
@@ -26935,41 +26936,29 @@ input[type=color] {
 }
 
 /*ss code here */
-.tp-hero-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
-  background: linear-gradient(180.21deg, #FFF9F9 -64.58%, rgba(255, 255, 255, 0.1) 115.31%), linear-gradient(90deg, #FFC368 0%, #D569E1 50%, #4164E1 100%);
-  opacity: 0.9;
-  border-radius: 30px;
-  margin: auto;
+.tp-hero-bg-img {
+  background-image: url("./../../img/about/bg-home1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .tp-hero-bg {
-    width: 110%;
-    left: -50px;
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .tp-hero-bg-img {
+    padding-top: 140px;
+    padding-bottom: 300px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .tp-hero-bg {
-    width: 110%;
-    left: -40px;
+  .tp-hero-bg-img {
+    padding-top: 170px;
+    padding-bottom: 250px;
   }
 }
 @media (max-width: 767px) {
-  .tp-hero-bg {
-    width: 120%;
-    left: -40px;
-    top: 20px;
+  .tp-hero-bg-img {
+    padding-top: 50px;
+    padding-bottom: 100px;
   }
-}
-.tp-hero-bg img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
 }
 
 .tp-hero-mlr {
@@ -27007,7 +26996,7 @@ input[type=color] {
   background-image: url("./../../img/about/about_bg..png");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 60px 30px;
+  padding: 60px 30px 0;
   border-radius: 40px;
 }
 @media (max-width: 767px) {
@@ -38250,7 +38239,138 @@ input[type=color] {
   border-left-color: #7709d7;
 }
 
+/*----------------------------------------*/
+/*  26. EXPERIENCE CSS START
+/*----------------------------------------*/
+.my-skills {
+  background-image: url("./../../img/about/about_bg1.jpg");
+  background-size: cover;
+}
+.my-skills__tab {
+  border: none;
+  justify-content: center;
+  gap: 15px;
+}
+.my-skills__tab .nav-link {
+  background-color: #F5F5F5;
+  border: 1px solid rgba(18, 20, 32, 0.4);
+  box-shadow: 0px 1px 3px rgba(18, 20, 32, 0.2);
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000;
+  padding: 12px 30px;
+  transition: 0.3s;
+  margin-right: 15px;
+}
+.my-skills__tab .nav-link::after {
+  content: "\f105";
+  font-family: "Font Awesome 5 Pro";
+  margin-left: 15px;
+}
+.my-skills__tab .nav-link.active::after {
+  content: "\f107";
+}
+.my-skills__tab .nav-link.active {
+  background-color: var(--tp-common-red);
+  color: #fff;
+  border-color: var(--tp-common-red);
+}
+
+.tab-content {
+  border: dashed 1px var(--tp-common-red);
+  padding-bottom: 45px;
+  padding-top: 80px;
+  margin-top: -40px;
+  padding: 80px 35px 35px;
+  border-radius: 15px;
+}
+
+.offer-area {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.offer__shadow {
+  position: absolute;
+  z-index: -1;
+}
+.offer__shape-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.3;
+}
+.offer__shape-right {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  opacity: 0.3;
+}
+.offer__icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  border-radius: 50%;
+  line-height: 70px;
+  border: solid 1px #ff3c82;
+  background: #fff;
+  margin-top: -35px;
+  transition: 1s;
+}
+.offer__item {
+  border: 1px solid rgba(218, 21, 21, 0.3);
+  background: #fff;
+  padding: 20px;
+  padding-top: 0;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+.offer__item .shape-top {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+.offer__item .shape-bottom {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+.offer__item:hover .shape-top {
+  top: -1px;
+  right: -1px;
+  opacity: 1;
+  visibility: visible;
+}
+.offer__item:hover .shape-bottom {
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  opacity: 1;
+  visibility: visible;
+}
+.offer__item:hover .offer__icon {
+  background: #da3445;
+  transform: rotateY(360deg);
+}
+.offer__item:hover .offer__icon svg path {
+  fill: #fff;
+}
+
 /* Home Page 1 Banner Section Css Start jobzilla*/
+.bg-light-blue {
+  background-color: rgba(37, 88, 171, 0.05);
+}
+
 .twm-home1-banner-section {
   position: relative;
 }
@@ -38762,4 +38882,28 @@ input[type=color] {
   opacity: 0.1;
   content: "";
   animation: rotate-center 15s linear infinite;
+}
+
+.modal-overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.64);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 600px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
 }/*# sourceMappingURL=main.css.map */

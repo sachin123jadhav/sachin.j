@@ -5,6 +5,7 @@
 /*----------------------------------------*/
 
 .tp-hero{
+  
     &__pl-pr{
         padding-top: 63px;
 
@@ -1144,40 +1145,23 @@
 
 /*ss code here */
 
-.tp-hero-bg{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
-    background: linear-gradient(180.21deg, #FFF9F9 -64.58%, rgba(255, 255, 255, 0.1) 115.31%), linear-gradient(90deg, #FFC368 0%, #D569E1 50%, #4164E1 100%);
-    opacity: 0.9;
-    border-radius: 30px;
-    margin:  auto;
-    @media #{$lg}{
-        width: 110%;
-        left: -50px;
-    }
-    @media #{$md}{
-        width: 110%;
-        left: -40px;
-    }
-    @media #{$xs}{
-        width: 120%;
-        left: -40px;
-        top: 20px;
-    }
-    & img{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        // @media #{$lg} {
-        //     width: auto;
-        //     height: auto;
-        // }
-    }
-
+.tp-hero-bg-img{
+     background-image: url('./../../img/about/bg-home1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+  background-position: right center;
+        @media #{$xl,$lg}{
+            padding-top: 140px;
+            padding-bottom: 300px;
+        }
+        @media #{$md}{
+            padding-top: 170px;
+            padding-bottom: 250px;
+        }
+        @media #{$xs}{
+            padding-top: 50px;
+            padding-bottom: 100px;
+        }
 }
 
 .tp-hero-mlr{
