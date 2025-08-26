@@ -22619,7 +22619,7 @@ input[type=color] {
 }
 .read-more.sm {
   font-size: 14px;
-  padding: 7px 10px;
+  padding: 6px 10px 8px;
   border-radius: 6px;
 }
 .read-more.sm::before {
@@ -22634,7 +22634,7 @@ input[type=color] {
 }
 .read-more.sm:hover::before {
   width: calc(100% - 4px);
-  border-radius: 6px;
+  border-radius: 4px;
 }
 .read-more.sm:hover span {
   margin-right: 10px;

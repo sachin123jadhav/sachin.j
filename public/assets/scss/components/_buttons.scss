@@ -830,7 +830,7 @@ top: 3px;
 
  &.sm {
     font-size: 14px;
-    padding: 7px 10px;
+    padding: 6px 10px 8px;
     border-radius: 6px;
 
     &::before {
@@ -847,7 +847,7 @@ top: 3px;
 
     &:hover::before {
       width: calc(100% - 4px);
-      border-radius: 6px;
+      border-radius: 4px;
     }
 
     &:hover span {
