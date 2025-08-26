@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 
 const experiences = [
@@ -132,12 +133,18 @@ const Experience = () => {
                     </div>
 
                     <div className="tp-experience__button">
-                      <button
-                        className="btn btn-primary"
-                        onClick={() => openModal(exp)}
+                      <Link
+                        href=""
+                        className="read-more sm"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          openModal(exp);
+                        }}
                       >
-                        Read More
-                      </button>
+                        <i className="fa fa-arrow-right back"></i>
+                        <span>Read More</span>
+                        <i className="fa fa-arrow-right front"></i>
+                      </Link>
                     </div>
                   </div>
                 </div>

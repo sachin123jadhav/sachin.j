@@ -58,7 +58,7 @@ const Portfolio = () => {
               return (
                 <div
                   key={i}
-                  className="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item wow fadeInUp"
+                  className="col-xl-3 col-lg-6 col-md-6 col-sm-6 grid-item wow fadeInUp"
                   data-wow-duration=".9s"
                   data-wow-delay={delay + "s"}
                 >

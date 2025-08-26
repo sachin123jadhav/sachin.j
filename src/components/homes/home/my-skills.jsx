@@ -120,7 +120,11 @@ function MySkills() {
             <Tabs
               id="controlled-tab-example"
               activeKey={key}
-              onSelect={(k) => setKey(k)}
+              onSelect={(k) => {
+                if (k !== key) {
+                  setKey(k); // ✅ Only change if it's a new tab
+                }
+              }}
               className="mb-3 my-skills__tab"
             >
               <Tab eventKey="Technologies" title="Technologies">
@@ -129,7 +133,7 @@ function MySkills() {
                     <div
                       className="col-lg-2 col-md-4 col-sm-6 wow bounceInUp"
                       data-wow-delay={`${index * 100}ms`}
-                      data-wow-duration="1500ms"
+                      data-wow-duration="1000ms"
                       key={index}
                     >
                       <div className="offer__item">

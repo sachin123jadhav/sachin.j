@@ -22556,6 +22556,91 @@ input[type=color] {
   color: var(--tp-common-yellow-3);
 }
 
+.read-more {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  position: relative;
+  padding: 14px 18px;
+  overflow: hidden;
+  background-color: #fff;
+  border: solid 1px #da3445;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.read-more::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 42px;
+  height: 43px;
+  background-color: #da3445;
+  transition: transform 0.3s ease;
+  /* transform: translate(5px, 5px); */
+  transform-origin: left;
+  border-radius: 100%;
+  z-index: 0;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.read-more i {
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.read-more span {
+  margin-left: 18px;
+  z-index: 2;
+  transition: all 0.3s ease;
+  margin-right: -14px;
+  position: relative;
+}
+.read-more .front {
+  transform: translateX(100px);
+}
+.read-more:hover::before {
+  width: calc(100% - 6px);
+  border-radius: 8px;
+}
+.read-more:hover .back {
+  transform: translateX(-100px);
+  width: 0;
+}
+.read-more:hover .front {
+  transform: translateX(0px);
+}
+.read-more:hover span {
+  margin-right: 15px;
+  margin-left: 0;
+  color: #fff;
+}
+.read-more.sm {
+  font-size: 14px;
+  padding: 7px 10px;
+  border-radius: 6px;
+}
+.read-more.sm::before {
+  top: 2px;
+  left: 2px;
+  width: 28px;
+  height: 28px;
+}
+.read-more.sm span {
+  margin-left: 14px;
+  margin-right: -10px;
+}
+.read-more.sm:hover::before {
+  width: calc(100% - 4px);
+  border-radius: 6px;
+}
+.read-more.sm:hover span {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
 /* pulse effect animation */
 @keyframes pulse {
   0% {
@@ -38318,6 +38403,7 @@ input[type=color] {
   background: #fff;
   margin-top: -35px;
   transition: 1s;
+  color: #da3445;
 }
 .offer__item {
   border: 1px solid rgba(218, 21, 21, 0.3);
@@ -38361,9 +38447,7 @@ input[type=color] {
 .offer__item:hover .offer__icon {
   background: #da3445;
   transform: rotateY(360deg);
-}
-.offer__item:hover .offer__icon svg path {
-  fill: #fff;
+  color: #fff;
 }
 
 /* Home Page 1 Banner Section Css Start jobzilla*/
@@ -38906,4 +38990,8 @@ input[type=color] {
   padding: 30px;
   border-radius: 10px;
   position: relative;
+}
+
+.tab-pane {
+  transition: none !important;
 }/*# sourceMappingURL=main.css.map */

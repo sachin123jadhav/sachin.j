@@ -53,6 +53,7 @@ border: none;justify-content: center;gap: 15px;
 		background: #fff;
 		margin-top: -35px;
 		transition: 1s;
+		color: #da3445;
 	}
 	&__item {
 		border: 1px solid rgba(218, 21, 21, 0.3);  background: #fff;
@@ -98,9 +99,7 @@ border: none;justify-content: center;gap: 15px;
 			.offer__icon {
 				background: #da3445;
 				transform: rotateY(360deg);
-				svg path {
-					fill: #fff;
-				}
+				color:#fff
 			}
 		}
 	}
